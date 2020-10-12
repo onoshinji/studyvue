@@ -1,0 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="app.js"></script>
+
+<p>{{ name }}</p>
+
+<!-- HTML要素をVue.jsで動的に指定したい場合は、v-bind を使います。 -->
+<a v-bind:href="link">Google</a>
+<!-- v-once をHTMLタグに含めることで1度描画された内容を変更不可にできます。 -->
+
+<h1 v-once>{{ title }}</h1>
+<!-- v-html はHTMLタグのまま出力するときに用います。 -->
+<p v-html="finishedLink"></p>
+v-on でイベントリスニングします。
+
+<button v-on:click="increase(2, $event)">Click me</button>
+
+<!-- v-on: の省略記法で、@click="link" のように書けます。
+
+また、v-bind の代わりに : も使えます。 -->
